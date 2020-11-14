@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+    author="learnOSM.org"
+    version="1.0"
+    shortdescription="Alex's essential"
+    description="Helppo tägäys eri asioille.">
+
+    <group name="Alex's essential">
+        <group name="Liikenne">
+            <item name="Yhdistetty pyörätie ja jalkakäytävä" type="way">
+                <label text="Lisätiedot" />
+                <key key="highway" value="cycleway" />
+                <key key="foot" value="designated" />
+                <key key="bicycle" value="designated" />
+                <key key="segregated" value="no" />
+                <text key="name" text="Nimi" default="" required="false" />
+                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
+                <check key="segregated" text="Erotettu" default="off" required="false" />
+                <check key="lit" text="Valaistu" required="false" />
+                <check key="tunnel" text="Tunneli" required="false" />
+                <check key="moped" text="Sallittu mopoille" required="false" />
+            </item>
+            <item name="Jalkakäytävä" type="way">
+                <label text="Lisätiedot" />
+                <key key="highway" value="footway" />
+                <text key="name" text="Nimi" default="" required="false" />
+                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
+                <check key="lit" text="Valaistu" required="false" />
+                <check key="tunnel" text="Tunneli" required="false" />
+            </item>
+        </group>
+        <group name="Osoitteet">
+            <item name="Osoite" type="closedway,node">
+                <label text="Osoite" />
+                <text key="addr:street" text="Katu" default="" required="yes" />
+                <text key="addr:housenumber" text="Talonnumero" default="" required="yes" />
+                <text key="addr:unit" text="Unit" default="" required="no" />
+                <text key="addr:postcode" text="Postinumero" default="" required="no" />
+                <text key="addr:city" text="Kaupunki/Kunta" default="" required="no" />
+            </item>
+        </group>
+        <group name="Opastusmerkit">
+            <item name="Opastusmerkki" type="way">
+                <label text="Suunnistusmerkki" />
+                <text key="destination" text="Destination" default="" required="yes" />
+                <text key="destination:ref" text="Tien numero" default="" required="yes" />
+                <text key="destination:ref:to" text="Opastus tielle" default="" required="no" />
+                <text key="destination:symbol" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/> />
+                <text key="destination:int_ref" text="E tie ref" default="" required="no" />
+            </item>
+        </group>
+    </group>
+</presets>
