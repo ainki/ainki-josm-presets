@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="learnOSM.org" version="1.0" shortdescription="Alex's essential" description="Helppo tägäys eri asioille.">
 
-    <group name="Alex's essential">
+    <group name="ainki essential">
         <group name="Liikenne">
             <item name="Yhdistetty pyörätie ja jalkakäytävä" type="way">
                 <label text="Lisätiedot" />
@@ -15,6 +15,7 @@
                 <check key="lit" text="Valaistu" required="false" />
                 <check key="tunnel" text="Tunneli" required="false" />
                 <check key="moped" text="Sallittu mopoille" required="false" />
+                <check key="oneway" text="Yksisuuntainen" required="false" />
             </item>
             <item name="Jalkakäytävä" type="way">
                 <label text="Lisätiedot" />
@@ -23,6 +24,7 @@
                 <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
                 <check key="lit" text="Valaistu" required="false" />
                 <check key="tunnel" text="Tunneli" required="false" />
+                <check key="oneway" text="Yksisuuntainen" required="false" />
             </item>
         </group>
         <group name="Osoitteet">
@@ -37,26 +39,26 @@
         </group>
         <group name="Rakennukset">
             <item name="Rakennus" type="closedway">
-                <label text="Rakennus perustiedot" />
+                <label text="Rakennuksen tai rakennuksen osan tiedot" />
                 <text key="building" text="Building" default="" required="no" values="yes, roof, apartments, house, residential, semidetached_house, terrace, commercial, industrial, office, retail, supermarket, church, chapel, religious, civic, fire_station, government, hospital, public, kindergarten, school, university, college, barn, shed, carport, garage, garages, parking, service, construction"/>
-                <text key="building:part" text="Building part" default="" required="no" />
+                <text key="building:part" text="Building part" default="" required="no" values="yes, roof"/>
                 <text key="building:levels" text="Kerrokset" default="" required="no" />
                 <text key="building:min_levels" text="Alin kerros" default="" required="no" />
                 <text key="building:material" text="Rakennuksen materiaali" default="" required="no" values="concrete, brick, wood, metal, glass"/>
                 <text key="building:colour" text="Rakennuksen väri" default="" required="no" />
                 <text key="roof:material" text="Katon materiaali" default="" required="no" values="concrete, roof_tiles, tar_paper, metal, glass, copper, grass, wood"/>
                 <text key="roof:colour" text="Katon väri" default="" required="no" />
-                <text key="roof:shape" text="Katon muoto" default="" required="no" />
+                <text key="roof:shape" text="Katon muoto" default="" required="no" values="flat, skillion, gabled, half-hipped, hipped, pyramidal, gambrel, mansard, dome, onion, round, saltbox"/>
             </item>
         </group>
         <group name="Opastusmerkit">
             <item name="Opastusmerkki" type="way">
                 <label text="Suunnistusmerkki" />
-                <text key="destination" text="Destination" default="" required="yes" />
-                <text key="destination:ref" text="Tien numero" default="" required="yes" />
-                <text key="destination:ref:to" text="Opastus tielle" default="" required="no" />
+                <text key="destination" text="Määränpää" default="" required="yes" />
+                <text key="destination:ref" text="Tien numero" default="" required="no" />
+                <text key="destination:int_ref" text="E tie numero" default="" required="no" />
+                <text key="destination:ref:to" text="Opastus tielle/teille" default="" required="no" />
                 <text key="destination:symbol" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
-                <text key="destination:int_ref" text="E tie ref" default="" required="no" />
             </item>
         </group>
     </group>
