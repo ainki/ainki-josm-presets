@@ -26,6 +26,13 @@
                 <check key="tunnel" text="Tunneli" required="false" />
                 <check key="oneway" text="Yksisuuntainen" required="false" />
             </item>
+            <item name="Driveway" type="way">
+                <label text="Lisätiedot" />
+                <key key="highway" value="service" />
+                <key key="service" value="driveway" />
+                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
+                <check key="oneway" text="Yksisuuntainen" required="false" />
+            </item>
         </group>
         <group name="Osoitteet">
             <item name="Osoite" type="closedway,node">
@@ -49,6 +56,7 @@
                 <text key="roof:material" text="Katon materiaali" default="" required="no" values="concrete, roof_tiles, tar_paper, metal, glass, copper, grass, wood"/>
                 <text key="roof:colour" text="Katon väri" default="" required="no" />
                 <text key="roof:shape" text="Katon muoto" default="" required="no" values="flat, skillion, gabled, half-hipped, hipped, pyramidal, gambrel, mansard, dome, onion, round, saltbox"/>
+                <text key="roof:direction" text="Katon suunta" default="" required="no" />
             </item>
         </group>
         <group name="Opastusmerkit">
