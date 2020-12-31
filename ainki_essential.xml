@@ -66,13 +66,29 @@
             </item>
         </group>
         <group name="Opastusmerkit">
-            <item name="Opastusmerkki" type="way">
+            <item name="Opastusmerkki yksisuuntainen" type="way">
                 <label text="Suunnistusmerkki" />
                 <text key="destination" text="Määränpää" default="" required="yes" />
                 <text key="destination:ref" text="Tien numero" default="" required="no" />
-                <text key="destination:int_ref" text="E tie numero" default="" required="no" />
+                <text key="destination:int_ref" text="E tien numero" default="" required="no" />
                 <text key="destination:ref:to" text="Opastus tielle/teille" default="" required="no" />
                 <text key="destination:symbol" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
+            </item>
+            <item name="Opastusmerkki forward" type="way">
+                <label text="Suunnistusmerkki viivan suuntaan" />
+                <text key="destination:forward" text="Määränpää" default="" required="yes" />
+                <text key="destination:ref:forward" text="Tien numero" default="" required="no" />
+                <text key="destination:int_ref:forward" text="E tien numero" default="" required="no" />
+                <text key="destination:ref:to:forward" text="Opastus tielle/teille" default="" required="no" />
+                <text key="destination:symbol:forward" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
+            </item>
+            <item name="Opastusmerkki backward" type="way">
+                <label text="Suunnistusmerkki viivan vastapäivään" />
+                <text key="destination:backward" text="Määränpää" default="" required="yes" />
+                <text key="destination:ref:backward" text="Tien numero" default="" required="no" />
+                <text key="destination:int_ref:backward" text="E tien numero" default="" required="no" />
+                <text key="destination:ref:to:backward" text="Opastus tielle/teille" default="" required="no" />
+                <text key="destination:symbol:backward" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
             </item>
         </group>
     </group>
