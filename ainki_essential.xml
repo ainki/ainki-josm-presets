@@ -16,6 +16,7 @@
                 <check key="tunnel" text="Tunneli" required="false" />
                 <check key="moped" text="Sallittu mopoille" required="false" />
                 <check key="oneway" text="Yksisuuntainen" required="false" />
+                <check key="snowplowing" text="Talvikunnossapito" required="false" />
             </item>
             <item name="Jalkakäytävä" type="way">
                 <label text="Lisätiedot" />
@@ -25,6 +26,7 @@
                 <check key="lit" text="Valaistu" required="false" />
                 <check key="tunnel" text="Tunneli" required="false" />
                 <check key="oneway" text="Yksisuuntainen" required="false" />
+                <check key="snowplowing" text="Talvikunnossapito" required="false" />
             </item>
             <item name="Driveway" type="way">
                 <label text="Lisätiedot" />
