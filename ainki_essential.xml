@@ -45,7 +45,7 @@
                 <text key="addr:postcode" text="Postinumero" default="" required="no" />
                 <text key="addr:city" text="Kaupunki/Kunta" default="" required="no" />
             </item>
-            <item name="Nimi suomi/ruotsi" type="closedway,node">
+            <item name="Nimi suomi/ruotsi" type="closedway,node,way">
                 <label text="Nimi suomi/ruotsi" />
                 <text key="name" text="Nimi" default="" required="yes" />
                 <text key="name:fi" text="Nimi suomeksi" default="" required="no" />
