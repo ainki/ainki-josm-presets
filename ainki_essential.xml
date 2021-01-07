@@ -10,6 +10,8 @@
                 <key key="bicycle" value="designated" />
                 <key key="segregated" value="no" />
                 <text key="name" text="Nimi" default="" required="false" />
+                <text key="name:fi" text="Nimi suomeksi" default="" required="false" />
+                <text key="name:sv" text="Nimi ruotsiksi" default="" required="false" />
                 <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
                 <check key="segregated" text="Erotettu" default="off" required="false" />
                 <check key="lit" text="Valaistu" required="false" />
@@ -22,6 +24,8 @@
                 <label text="Lisätiedot" />
                 <key key="highway" value="footway" />
                 <text key="name" text="Nimi" default="" required="false" />
+                <text key="name:fi" text="Nimi suomeksi" default="" required="false" />
+                <text key="name:sv" text="Nimi ruotsiksi" default="" required="false" />
                 <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
                 <check key="lit" text="Valaistu" required="false" />
                 <check key="tunnel" text="Tunneli" required="false" />
