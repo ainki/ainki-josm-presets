@@ -79,6 +79,7 @@
                 <text key="destination:int_ref" text="E tien numero" default="" required="no" />
                 <text key="destination:ref:to" text="Opastus tielle/teille" default="" required="no" />
                 <text key="destination:symbol" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
+                <text key="destination:colour" text="Destination väri" default="" required="no" />
             </item>
             <item name="Opastusmerkki forward" type="way">
                 <label text="Suunnistusmerkki viivan suuntaan" />
