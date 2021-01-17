@@ -62,7 +62,7 @@
                 <text key="building" text="Building" default="" required="no" values="yes, roof, apartments, house, residential, semidetached_house, terrace, commercial, industrial, office, retail, supermarket, church, chapel, religious, civic, fire_station, government, hospital, public, kindergarten, school, university, college, barn, shed, carport, garage, garages, parking, service, construction"/>
                 <text key="building:part" text="Building part" default="" required="no" values="yes, roof"/>
                 <text key="building:levels" text="Kerrokset" default="" required="no" />
-                <text key="building:min_levels" text="Alin kerros" default="" required="no" />
+                <text key="building:min_level" text="Alin kerros" default="" required="no" />
                 <text key="building:material" text="Rakennuksen materiaali" default="" required="no" values="concrete, brick, wood, metal, glass"/>
                 <text key="building:colour" text="Rakennuksen väri" default="" required="no" />
                 <text key="roof:material" text="Katon materiaali" default="" required="no" values="concrete, roof_tiles, tar_paper, metal, glass, copper, grass, wood"/>
