@@ -65,6 +65,7 @@
                 <text key="building:min_level" text="Alin kerros" default="" required="no" />
                 <text key="building:material" text="Rakennuksen materiaali" default="" required="no" values="concrete, brick, wood, metal, glass"/>
                 <text key="building:colour" text="Rakennuksen väri" default="" required="no" />
+                <text key="roof:levels" text="Katon kerrokset" default="" required="no" />
                 <text key="roof:material" text="Katon materiaali" default="" required="no" values="concrete, roof_tiles, tar_paper, metal, glass, copper, grass, wood"/>
                 <text key="roof:colour" text="Katon väri" default="" required="no" />
                 <text key="roof:shape" text="Katon muoto" default="" required="no" values="flat, skillion, gabled, half-hipped, hipped, pyramidal, gambrel, mansard, dome, onion, round, saltbox"/>
