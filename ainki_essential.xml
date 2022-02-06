@@ -12,7 +12,7 @@
                 <text key="name" text="Nimi" default="" required="false" />
                 <text key="name:fi" text="Nimi suomeksi" default="" required="false" />
                 <text key="name:sv" text="Nimi ruotsiksi" default="" required="false" />
-                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
+                <combo key="surface" text="Päällyste" values="asphalt,fine_gravel,paved,unpaved,concrete,paving_stones,concrete:plates,cobblestone"/>
                 <check key="segregated" text="Erotettu" default="off" required="false" />
                 <check key="lit" text="Valaistu" required="false" />
                 <check key="tunnel" text="Tunneli" required="false" />
@@ -26,7 +26,7 @@
                 <text key="name" text="Nimi" default="" required="false" />
                 <text key="name:fi" text="Nimi suomeksi" default="" required="false" />
                 <text key="name:sv" text="Nimi ruotsiksi" default="" required="false" />
-                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
+                <combo key="surface" text="Päällyste" values="asphalt,fine_gravel,paved,unpaved,concrete,paving_stones,concrete:plates,cobblestone"/>
                 <check key="lit" text="Valaistu" required="false" />
                 <check key="tunnel" text="Tunneli" required="false" />
                 <check key="oneway" text="Yksisuuntainen" required="false" />
@@ -36,9 +36,45 @@
                 <label text="Lisätiedot" />
                 <key key="highway" value="service" />
                 <key key="service" value="driveway" />
-                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel, paved, unpaved, concrete, paving_stones, concrete:plates, cobblestone"/>
+                <combo key="surface" text="Päällyste" values="asphalt, fine_gravel,paved,unpaved,concrete,paving_stones,concrete:plates,cobblestone"/>
                 <check key="oneway" text="Yksisuuntainen" required="false" />
             </item>
+        </group>
+        <group name="Pysäköinti">
+            <item name="Molemmalla puolella eri">
+                <label text="Vasen puoli" />
+                <text key="parking:condition:left" text="Ehto" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
+                <text key="parking:condition:left:maxstay" text="Maxstay" values="30 minutes, 1 hours" />
+                <text key="parking:condition:left:time_interval" text="Ehdon aikaväli" values="Mo-Fr 06:00-18:00; PH, Sa-Su off" />
+                <text key="parking:condition:left:default" text="Ehdon ulkopuolella" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
+                <text key="parking:condition:left:capacity" text="Paikkojen määrä" />
+                <label text="--------------------" />
+                <label text="Oikea puoli" />
+                <text key="parking:condition:right" text="Ehto" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
+                <text key="parking:condition:right:maxstay" text="Maxstay" values="30 minutes, 1 hours" />
+                <text key="parking:condition:right:time_interval" text="Ehdon aikaväli" values="Mo-Fr 06:00-18:00; PH, Sa-Su off" />
+                <text key="parking:condition:right:default" text="Ehdon ulkopuolella" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
+                <text key="parking:condition:right:capacity" text="Paikkojen määrä" />
+            </item>
+            <item name="Sama kummallakin puolella">
+                <label text="Sama kummallakin puolella" />
+                <text key="parking:condition:both" text="Ehto" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
+                <text key="parking:condition:both:maxstay" text="Maxstay" values="30 minutes, 1 hours" />
+                <text key="parking:condition:both:time_interval" text="Ehdon aikaväli" values="Mo-Fr 06:00-18:00; PH, Sa-Su off,Mo-Fr 08:00-20:00; PH, Sa-Su off" />
+                <text key="parking:condition:both:default" text="Ehdon ulkopuolella" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping,no" />
+                <text key="parking:condition:both:capacity" text="Paikkojen määrä" />
+            </item>
+            <!-- Testi
+            <label text="Vasen laita"/>
+            <item name="Vasen laita parallel" type="way">
+                <label text="Vasen laita parallel" />
+                <text key="parking:lane:left" text="Pysäköinti" required="no" values="parallel,diagonal,perpendicular,no,separate" />
+                <text key="parking:lane:left:parallel" text="Sijainti" values="on_street,half_on_kerb,on_kerb,street_side" value_template="" />
+                <text key="parking:condition:left" text="Ehto" required="no" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping,no" />
+                <text key="parking:condition:left:default" text="Ehdon ulkopuolella" required="no" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping,no" />
+                <text key="parking:condition:left:time_interval" text="Ehdon aikaväli" required="no" values="Mo-Fr 06:00-18:00; PH, Sa-Su off" />
+                <text key="parking:condition:left:maxstay" text="Maxstay" required="no" values="30 minutes, 1 hours" />
+            </item> -->
         </group>
         <group name="Osoitteet">
             <item name="Osoite" type="closedway,node">
@@ -59,16 +95,16 @@
         <group name="Rakennukset">
             <item name="Rakennus" type="closedway">
                 <label text="Rakennuksen tai rakennuksen osan tiedot" />
-                <text key="building" text="Building" default="" required="no" values="yes, roof, apartments, house, residential, semidetached_house, terrace, commercial, industrial, office, retail, supermarket, church, chapel, religious, civic, fire_station, government, hospital, public, kindergarten, school, university, college, barn, shed, carport, garage, garages, parking, service, construction"/>
+                <text key="building" text="Building" default="" required="no" values="yes,roof, apartments,house,residential,semidetached_house,terrace,commercial,industrial,office,retail,supermarket,church,chapel,religious,civic,fire_station,government,hospital,public,kindergarten,school,university,college,barn,shed,carport,garage,garages,parking,service,construction"/>
                 <text key="building:part" text="Building part" default="" required="no" values="yes, roof"/>
                 <text key="building:levels" text="Kerrokset" default="" required="no" />
                 <text key="building:min_level" text="Alin kerros" default="" required="no" />
-                <text key="building:material" text="Rakennuksen materiaali" default="" required="no" values="concrete, brick, wood, metal, glass"/>
+                <text key="building:material" text="Rakennuksen materiaali" default="" required="no" values="concrete,brick,wood,metal,glass"/>
                 <text key="building:colour" text="Rakennuksen väri" default="" required="no" />
                 <text key="roof:levels" text="Katon kerrokset" default="" required="no" />
-                <text key="roof:material" text="Katon materiaali" default="" required="no" values="concrete, roof_tiles, tar_paper, metal, glass, copper, grass, wood"/>
+                <text key="roof:material" text="Katon materiaali" default="" required="no" values="concrete,roof_tiles,tar_paper,metal,glass,copper,grass,wood"/>
                 <text key="roof:colour" text="Katon väri" default="" required="no" />
-                <text key="roof:shape" text="Katon muoto" default="" required="no" values="flat, skillion, gabled, half-hipped, hipped, pyramidal, gambrel, mansard, dome, onion, round, saltbox"/>
+                <text key="roof:shape" text="Katon muoto" default="" required="no" values="flat,skillion,gabled,half-hipped,hipped,pyramidal,gambrel,mansard,dome, onion, round, saltbox"/>
                 <text key="roof:direction" text="Katon suunta" default="" required="no" />
             </item>
         </group>
