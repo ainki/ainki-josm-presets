@@ -135,5 +135,46 @@
                 <text key="destination:symbol:backward" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
             </item>
         </group>
+        <group name="Liikenne / Muu">
+            <item name="Latausasema/laturi" type="node">
+                <label text="Latausasema tai laturi"/>
+                <key key="amenity" value="charging_station" />
+                <text key="name" text="Nimi" default="" required="yes"/>
+                <text key="ref" text="Reference" required="no" />
+                <text key="operator" text="Operoija" default="" required="yes"/>
+                <text key="brand" text="Brändi" default="" required="no"/>
+                <text key="capacity" text="Paikkoja/latureita yhteensä" default="" required="yes"/>
+                <text key="opening_hours" text="Auki" default="" required="no"/>
+                <space/>
+                <label text="Kulkuneuvot joita voi ladata:"/>
+                <checkgroup columns="5">
+	                <check key="bicycle" text="Polkupyörä" />	                
+                    <check key="scooter" text="Mopo" />
+	                <check key="motorcycle" text="Moottoripyörä" />
+	                <check key="motorcar" text="Auto" />
+	                <check key="truck" text="Rekka" />
+	            </checkgroup>
+                <space/>
+                <label text="Maksaminen:"/>
+                <check key="fee" text="Maksullinen" default=""/>
+                <label text="Maksutavat:"/>
+                <checkgroup columns="5">
+                    <check key="authentication:app" text="Sovelluksella"/>
+                    <check key="authentication:nfc" text="NFC tagilla"/>
+                    <check key="authentication:membership_card" text="Tagilla tai avaimella"/>
+                    <check key="authentication:short_message" text="Tekstiviestillä"/>
+                    <!-- <check key="authentication:debit_card" text="Luotto- tai pankkikortilla"/> -->
+                </checkgroup >
+                <space/>
+                <label text="Laturittyppien määrät ja tehot:"/>
+                <text key="socket:type2" text="Type 2" default="" required="no"/>
+                <text key="socket:type2:output" text="Type 2 teho" default="" required="no"/>
+                <text key="socket:type2_combo" text="CCS" default="" required="no"/>
+                <text key="socket:type2_combo:output" text="CCS teho" default="" required="no"/>
+                <text key="socket:chademo" text="Chademo" default="" required="no"/>
+                <text key="socket:chademo:output" text="Chademo teho" default="" required="no"/>
+                <!-- Tässä nyt toistaiseksi vain yleisimmät laturityypit -->
+            </item>
+        </group>
     </group>
 </presets>
