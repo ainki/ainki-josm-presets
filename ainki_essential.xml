@@ -139,12 +139,16 @@
             <item name="Latausasema/laturi" type="node">
                 <label text="Latausasema tai laturi"/>
                 <key key="amenity" value="charging_station" />
-                <text key="name" text="Nimi" default="" required="yes"/>
-                <text key="ref" text="Reference" required="no" />
-                <text key="operator" text="Operoija" default="" required="yes"/>
-                <text key="brand" text="Brändi" default="" required="no"/>
-                <text key="capacity" text="Paikkoja/latureita yhteensä" default="" required="yes"/>
-                <text key="opening_hours" text="Auki" default="" required="no"/>
+                <text key="name" text="Nimi" default="" />
+                <text key="ref" text="Reference" />
+                <text key="operator" text="Operoija" default="" />
+                <text key="brand" text="Brändi" default="" />
+                <text key="network" text="Verkosto" default="" />
+                <text key="capacity" text="Paikkoja/latureita yhteensä" default="" />
+                <text key="opening_hours" text="Auki" default="" />
+                <space/>
+                <label text="Käyttö:"/>
+                <combo key="access" text="Kuka voi käyttää" values="yes, customers, private" />
                 <space/>
                 <label text="Kulkuneuvot joita voi ladata:"/>
                 <checkgroup columns="5">
