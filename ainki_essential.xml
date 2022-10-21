@@ -40,6 +40,7 @@
                 <check key="oneway" text="Yksisuuntainen" required="false" />
             </item>
         </group>
+        <!-- 
         <group name="Pysäköinti">
             <item name="Molemmalla puolella eri">
                 <label text="Vasen puoli" />
@@ -48,7 +49,7 @@
                 <text key="parking:condition:left:time_interval" text="Ehdon aikaväli" values="Mo-Fr 06:00-18:00; PH, Sa-Su off" />
                 <text key="parking:condition:left:default" text="Ehdon ulkopuolella" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
                 <text key="parking:condition:left:capacity" text="Paikkojen määrä" />
-                <label text="--------------------" />
+                <label text="_____________" />
                 <label text="Oikea puoli" />
                 <text key="parking:condition:right" text="Ehto" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping" />
                 <text key="parking:condition:right:maxstay" text="Maxstay" values="30 minutes, 1 hours" />
@@ -64,7 +65,7 @@
                 <text key="parking:condition:both:default" text="Ehdon ulkopuolella" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping,no" />
                 <text key="parking:condition:both:capacity" text="Paikkojen määrä" />
             </item>
-            <!-- Testi
+
             <label text="Vasen laita"/>
             <item name="Vasen laita parallel" type="way">
                 <label text="Vasen laita parallel" />
@@ -74,8 +75,8 @@
                 <text key="parking:condition:left:default" text="Ehdon ulkopuolella" required="no" values="free,ticket,disc,residents,customers,private,disabled,no_parking,no_stopping,no" />
                 <text key="parking:condition:left:time_interval" text="Ehdon aikaväli" required="no" values="Mo-Fr 06:00-18:00; PH, Sa-Su off" />
                 <text key="parking:condition:left:maxstay" text="Maxstay" required="no" values="30 minutes, 1 hours" />
-            </item> -->
-        </group>
+            </item>
+        </group> -->
         <group name="Osoitteet">
             <item name="Osoite" type="closedway,node">
                 <label text="Osoite" />
@@ -118,6 +119,7 @@
                 <text key="destination:symbol" text="Symboli/tunnus" values="aerialway, airport, centre, harbour, hospital, info, car_shuttle_train, railroad_freight_terminal, train_station, food, fuel, lodging, parking, parking_truck, covered_parking, phone, police, industrial, motorway, camp_site, ferry"/>
                 <text key="destination:colour" text="Destination väri" default="" required="no" />
             </item>
+            <separator />
             <item name="Opastusmerkki forward" type="way">
                 <label text="Suunnistusmerkki viivan suuntaan" />
                 <text key="destination:forward" text="Määränpää" default="" required="yes" />
@@ -137,7 +139,7 @@
                 <text key="destination:colour:backward" text="Destination väri" default="" required="no" />
             </item>
         </group>
-        <group name="Liikenne / Muu">
+        <group name="Muut autoihin ja liikenteeseen liittyvät">
             <item name="Latausasema/laturi" type="node">
                 <label text="Latausasema tai laturi"/>
                 <key key="amenity" value="charging_station" />
@@ -180,6 +182,121 @@
                 <text key="socket:chademo" text="Chademo" default="" required="no"/>
                 <text key="socket:chademo:output" text="Chademo teho" default="" required="no"/>
                 <!-- Tässä nyt toistaiseksi vain yleisimmät laturityypit -->
+            </item>
+        </group>
+        <group name="Muuta">
+            <item name="Muu pakettiautomaatti" type="node">
+                <label text="Pakettiautomaatti"/>
+                <key key="amenity" value="parcel_locker" />
+                <combo key="parcel_pickup" text="Pakettien vastaanotto">
+                    <list_entry value="yes" display_value="Kyllä" />
+                    <list_entry value="no" display_value="Ei"/>
+                </combo>
+                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö:">
+                    <list_entry value="yes" display_value="Kyllä" />
+                    <list_entry value="no" display_value="Ei"/>
+                    <list_entry value="returns_only" display_value="Vain palautukset" />
+                </combo>
+                <combo key="parcel_locker:type" text="Millainen automaatti?" >
+                    <list_entry value="parcel_box" display_value="Luukullinen"/>
+				    <!-- <list_entry value="circular" display_value="circular"/> -->
+				    <list_entry value="cabinet" display_value="Kaappi" />
+                </combo>
+                <text default="" key="name" text="Automaatin nimi:" />
+                <text default="" key="ref" text="Automaatin numero:" />
+                <text default="" key="operator" text="Automaatin operaattori/mitkä firmat kuljettaa" />
+                <text default="" key="brand" text="Automaatin brandi" />
+                <text default="" key="opening_hours" text="Avoinna:"  />
+                <space/>
+                <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
+                <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
+                <check key="authentication:barcode_scanner" text="Viivakoodinlukija?" />
+                <check key="payment" text="Voiko automaattiin maksaa?" />
+
+            </item>
+            <separator/>
+            <item name="Posti pakettiautomaatti" type="node">
+                <label text="Postin pakettiautomatti"/>
+                <key key="amenity" value="parcel_locker" />
+                <key key="parcel_mail_in" value="yes" />
+                <key key="parcel_pickup" value="yes" />
+                <key key="parcel_locker:type" value="cabinet" />
+                <key key="operator" value="Posti" />
+                <key key="operator:wikidata" value="Q843453" />
+                <key key="operatro:wikipedia" value="fi:Posti Group" />
+                <key key="brand" value="Postin automaatti" />
+                <space />
+                <text default="Postin automaatti, " key="name" text="Automaatin nimi:" />
+                <text default="" key="ref" text="Automaatin numero:" />
+			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <space />
+                <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
+                <!-- <check key="app_operated" text="Ohjaus sovelluksen kautta?" /> -->
+            </item>
+            <item name="Budbee pakettiautomaatti" type="node">
+                <label text="Budbee pakettiautomatti"/>
+                <key key="amenity" value="parcel_locker" />
+                <key key="parcel_mail_in" value="returns_only" />
+                <key key="parcel_pickup" value="yes" />
+                <key key="parcel_locker:type" value="cabinet" />
+                <key key="operator" value="Budbee" />
+                <!-- <key key="operator:wikidata" value="" />
+                <key key="operatro:wikipedia" value="" /> -->
+                <key key="brand" value="Budbee Box" />
+                <space />
+                <text default="" key="name" text="Automaatin nimi:" />
+                <text default="" key="ref" text="Automaatin numero:" />
+			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <space />
+                <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
+                <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
+            </item>
+            <item name="Smartmile pakettiautomaatti" type="node">
+                <label text="Smartmile pakettiautomatti"/>
+                <key key="amenity" value="parcel_locker" />
+                <key key="parcel_mail_in" value="yes" />
+                <key key="parcel_pickup" value="yes" />
+                <key key="parcel_locker:type" value="cabinet" />
+                <key key="brand" value="Smartmile" />
+                <!-- <key key="operator:wikidata" value="" />
+                <key key="operatro:wikipedia" value="" /> -->
+                <space />
+                <text key="operator" default="Matkahuolto;Postnord;DB Schenker;DHL" text="Paketteja tomittavat firmat:" />
+                <text default="" key="name" text="Automaatin nimi:" />
+                <text default="" key="ref" text="Automaatin numero:" />
+			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <space/>
+                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö::">
+                    <list_entry value="yes" display_value="Kyllä" />
+                    <list_entry value="no" display_value="Ei"/>
+                    <list_entry value="returns_only" display_value="Vain palautukset" />
+                </combo>
+                <space />
+                <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
+                <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
+            </item>
+            <item name="Pakettipiste pakettiautomaatti" type="node">
+                <label text="Pakettipiste pakettiautomatti"/>
+                <key key="amenity" value="parcel_locker" />
+                <key key="parcel_mail_in" value="yes" />
+                <key key="parcel_pickup" value="yes" />
+                <key key="parcel_locker:type" value="cabinet" />
+                <key key="brand" value="Pakettipiste" />
+                <!-- <key key="operator:website" value="https://pakettipiste.fi/" -->
+                <space />
+                <text key="operator" default="Matkahuolto;Postnord;DHL" text="Paketteja tomittavat firmat:" />
+                <text default="" key="name" text="Automaatin nimi:" />
+                <text default="" key="ref" text="Automaatin numero:" />
+			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <space/>
+                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö:">
+                    <list_entry value="yes" display_value="Kyllä" />
+                    <list_entry value="no" display_value="Ei"/>
+                    <list_entry value="returns_only" display_value="Vain palautukset" />
+                </combo>
+                <space />
+                <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
+                <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
             </item>
         </group>
     </group>
