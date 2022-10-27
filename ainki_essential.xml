@@ -184,7 +184,7 @@
                 <!-- Tässä nyt toistaiseksi vain yleisimmät laturityypit -->
             </item>
         </group>
-        <group name="Muuta">
+        <group name="Palvelut">
             <item name="Muu pakettiautomaatti" type="node">
                 <label text="Pakettiautomaatti"/>
                 <key key="amenity" value="parcel_locker" />
@@ -223,7 +223,7 @@
                 <key key="parcel_locker:type" value="cabinet" />
                 <key key="operator" value="Posti" />
                 <key key="operator:wikidata" value="Q843453" />
-                <key key="operatro:wikipedia" value="fi:Posti Group" />
+                <key key="operator:wikipedia" value="fi:Posti Group" />
                 <key key="brand" value="Postin automaatti" />
                 <space />
                 <text default="Postin automaatti, " key="name" text="Automaatin nimi:" />
@@ -241,7 +241,7 @@
                 <key key="parcel_locker:type" value="cabinet" />
                 <key key="operator" value="Budbee" />
                 <!-- <key key="operator:wikidata" value="" />
-                <key key="operatro:wikipedia" value="" /> -->
+                <key key="operator:wikipedia" value="" /> -->
                 <key key="brand" value="Budbee Box" />
                 <space />
                 <text default="" key="name" text="Automaatin nimi:" />
