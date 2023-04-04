@@ -231,7 +231,7 @@
 			    <text default="" key="opening_hours" text="Avoinna:"  />
                 <space />
                 <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
-                <!-- <check key="app_operated" text="Ohjaus sovelluksen kautta?" /> -->
+                <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
             </item>
             <item name="Budbee pakettiautomaatti" type="node">
                 <label text="Budbee pakettiautomatti"/>
@@ -244,11 +244,12 @@
                 <key key="operator:wikipedia" value="" /> -->
                 <key key="brand" value="Budbee Box" />
                 <space />
-                <text default="" key="name" text="Automaatin nimi:" />
-                <text default="" key="ref" text="Automaatin numero:" />
-			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <text default="Budbee Box," key="name" text="Automaatin nimi" />
+                <text default="" key="ref" text="Automaatin numero" />
+			    <text default="" key="opening_hours" text="Avoinna"  />
                 <space />
                 <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
+                <!-- <check key="" -->
                 <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
             </item>
             <item name="Smartmile pakettiautomaatti" type="node">
@@ -261,12 +262,12 @@
                 <!-- <key key="operator:wikidata" value="" />
                 <key key="operatro:wikipedia" value="" /> -->
                 <space />
-                <text key="operator" default="Matkahuolto;Postnord;DB Schenker;DHL" text="Paketteja tomittavat firmat:" />
-                <text default="" key="name" text="Automaatin nimi:" />
-                <text default="" key="ref" text="Automaatin numero:" />
-			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <text key="operator" default="Matkahuolto;Postnord;DB Schenker;DHL" text="Paketteja tomittavat firmat" />
+                <text default="" key="name" text="Automaatin nimi" />
+                <text default="" key="ref" text="Automaatin numero" />
+			    <text default="" key="opening_hours" text="Avoinna"  />
                 <space/>
-                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö::">
+                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö">
                     <list_entry value="yes" display_value="Kyllä" />
                     <list_entry value="no" display_value="Ei"/>
                     <list_entry value="returns_only" display_value="Vain palautukset" />
@@ -284,12 +285,12 @@
                 <key key="brand" value="Pakettipiste" />
                 <!-- <key key="operator:website" value="https://pakettipiste.fi/" -->
                 <space />
-                <text key="operator" default="Matkahuolto;Postnord;DHL" text="Paketteja tomittavat firmat:" />
-                <text default="" key="name" text="Automaatin nimi:" />
-                <text default="" key="ref" text="Automaatin numero:" />
-			    <text default="" key="opening_hours" text="Avoinna:"  />
+                <text key="operator" default="Matkahuolto;Postnord;DHL" text="Paketteja tomittavat firmat" />
+                <text default="" key="name" text="Automaatin nimi" />
+                <text default="" key="ref" text="Automaatin numero" />
+			    <text default="" key="opening_hours" text="Avoinna"  />
                 <space/>
-                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö:">
+                <combo key="parcel_mail_in" text="Pakettien lähetys/jättö">
                     <list_entry value="yes" display_value="Kyllä" />
                     <list_entry value="no" display_value="Ei"/>
                     <list_entry value="returns_only" display_value="Vain palautukset" />
