@@ -20,6 +20,25 @@
                 <check key="oneway" text="Yksisuuntainen" required="false" />
                 <check key="snowplowing" text="Talvikunnossapito" required="false" />
             </item>
+            <item name="Moottorikäyttöisellä ajoneuvolla ajo kielletty (kevyt liikenne)" type="way">
+                <label text="Lisätiedot" />
+                <key key="foot" value="yes" />
+                <key key="bicycle" value="yes" />
+                <key key="motor_vehicle" value="no" />
+                <key key="segregated" value="no" />
+                <combo key="highway" text="Highway tyyppi" values="cycleway,service" required="true"/>
+                <combo key="motor_vehicle" text="motor_vehicle" values="no,yes,private,destination,permissive,delivery" required="false"/>
+                <text key="name" text="Nimi" default="" required="false" />
+                <text key="name:fi" text="Nimi suomeksi" default="" required="false" />
+                <text key="name:sv" text="Nimi ruotsiksi" default="" required="false" />
+                <combo key="surface" text="Päällyste" values="asphalt,fine_gravel,paved,unpaved,concrete,paving_stones,concrete:plates,cobblestone"/>
+                <check key="segregated" text="Erotettu" default="off" required="false" />
+                <check key="lit" text="Valaistu" required="false" />
+                <check key="tunnel" text="Tunneli" required="false" />
+                <check key="moped" text="Sallittu mopoille" required="false" />
+                <check key="oneway" text="Yksisuuntainen" required="false" />
+                <check key="snowplowing" text="Talvikunnossapito" required="false" />
+            </item>
             <item name="Jalkakäytävä" type="way">
                 <label text="Lisätiedot" />
                 <key key="highway" value="footway" />
