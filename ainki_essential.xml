@@ -328,12 +328,12 @@
                 <key key="parcel_pickup" value="yes" />
                 <key key="parcel_locker:type" value="cabinet" />
                 <key key="brand" value="PostNord" />
-                <key key="operator:website" value="https://www.postnord.fi/">
+                <key key="operator:website" value="https://www.postnord.fi/" />
                 <space />
                 <text key="operator" default="PostNord" text="Paketteja tomittavat firmat" />
                 <text key="name" text="Automaatin nimi" default="PostNord Lähiboxi " />
-                <text default="" key="ref" text="Automaatin numero" />
-			          <text default="" key="opening_hours" text="Avoinna" default="24/7" />
+                <text key="ref" text="Automaatin numero" />
+			          <text key="opening_hours" text="Avoinna" default="24/7" />
                 <space />
                 <check key="display_operated" text="Automaatin käyttö näytön avulla?" />
                 <check key="app_operated" text="Ohjaus sovelluksen kautta?" />
@@ -345,12 +345,12 @@
                 <key key="parcel_pickup" value="yes" />
                 <key key="parcel_locker:type" value="cabinet" />
                 <key key="brand" value="Matkahuolto" />
-                <key key="operator:website" value="https://www.matkahuolto.fi/">
+                <key key="operator:website" value="https://www.matkahuolto.fi/" />
                 <space />
                 <text key="operator" default="Matkahuolto" text="Paketteja tomittavat firmat" />
-                <text default="" key="name" text="Automaatin nimi" default="Matkahuolto " />
-                <text default="" key="ref" text="Automaatin numero" />
-			          <text default="" key="opening_hours" text="Avoinna" default="24/7" />
+                <text key="name" text="Automaatin nimi" default="Matkahuolto ulkoautomaatti " />
+                <text key="ref" text="Automaatin numero" />
+			          <text key="opening_hours" text="Avoinna" default="24/7" />
                 <space />
                 <label text="Osoite" />
                 <text key="addr:street" text="Katu" default="" />
