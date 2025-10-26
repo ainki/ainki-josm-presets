@@ -159,7 +159,7 @@
             </item>
         </group>
         <group name="Muut autoihin ja liikenteeseen liittyvät">
-            <item name="Latausasema/laturi" type="node">
+            <item name="Latausasema/laturi" type="node,closedway">
                 <label text="Latausasema tai laturi"/>
                 <key key="amenity" value="charging_station" />
                 <text key="name" text="Nimi" default="" />
@@ -364,3 +364,4 @@
         </group>
     </group>
 </presets>
+
