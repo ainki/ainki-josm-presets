@@ -202,6 +202,20 @@
                 <text key="socket:chademo:output" text="Chademo teho" default="" required="no"/>
                 <!-- Tässä nyt toistaiseksi vain yleisimmät laturityypit -->
             </item>
+            <item name="Latausaseman laturi" type="node">
+                <label text="Latausaseman laturi"/>
+                <key key="man_made" value="charge_point" />
+                <text key="ref" text="Reference" />
+                <space/>
+                <label text="Laturittyppien määrät ja tehot:"/>
+                <text key="socket:type2" text="Type 2" default="" required="no"/>
+                <text key="socket:type2:output" text="Type 2 teho" default="" required="no"/>
+                <text key="socket:type2_combo" text="CCS" default="" required="no"/>
+                <text key="socket:type2_combo:output" text="CCS teho" default="" required="no"/>
+                <text key="socket:chademo" text="Chademo" default="" required="no"/>
+                <text key="socket:chademo:output" text="Chademo teho" default="" required="no"/>
+                <!-- Tässä nyt toistaiseksi vain yleisimmät laturityypit -->
+            </item>
         </group>
         <group name="Palvelut">
             <item name="Muu pakettiautomaatti" type="node">
