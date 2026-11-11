@@ -163,13 +163,17 @@
                 <label text="Latausasema tai laturi"/>
                 <key key="amenity" value="charging_station" />
                 <text key="name" text="Nimi" default="" />
-                <text key="ref" text="Reference" />
                 <text key="operator" text="Operoija" default="" />
-                <text key="operator:ref" text="Operaattorin laturien tunnisteet" />
                 <text key="brand" text="Brändi" default="" />
                 <text key="network" text="Verkosto" default="" />
-                <text key="capacity" text="Paikkoja/latureita yhteensä" default="" />
+                <space/>
+                <text key="ref" text="Reference" />
+                <text key="ref:operator" text="Operaattorin laturien tunnisteet" />
+                <text key="ref:EU:EVSE" text="EVSE ref (AFIR)" default="" />
+                <space/>
                 <text key="opening_hours" text="Auki" default="" />
+                <text key="maxstay" text="Maxstay" default="" />
+                <check key="parking:fee" text="Maksullinen parkki"/>
                 <space/>
                 <label text="Käyttö:"/>
                 <combo key="access" text="Kuka voi käyttää" values="yes, customers, private" />
@@ -177,7 +181,7 @@
                 <label text="Kulkuneuvot joita voi ladata:"/>
                 <checkgroup columns="5">
 	                <check key="bicycle" text="Polkupyörä" />	                
-                    <check key="scooter" text="Mopo" />
+                  <check key="scooter" text="Mopo" />
 	                <check key="motorcycle" text="Moottoripyörä" />
 	                <check key="motorcar" text="Auto" />
 	                <check key="truck" text="Rekka" />
@@ -185,16 +189,19 @@
                 <space/>
                 <label text="Maksaminen:"/>
                 <check key="fee" text="Maksullinen" default=""/>
-                <label text="Maksutavat:"/>
+                <label text="Avaustavat:"/>
                 <checkgroup columns="5">
                     <check key="authentication:app" text="Sovelluksella"/>
                     <check key="authentication:nfc" text="NFC tagilla"/>
                     <check key="authentication:membership_card" text="Tagilla tai avaimella"/>
                     <check key="authentication:short_message" text="Tekstiviestillä"/>
-                    <!-- <check key="authentication:debit_card" text="Luotto- tai pankkikortilla"/> -->
+                    <check key="authentication:debit_card" text="Luotto- tai pankkikortilla"/>
                 </checkgroup >
                 <space/>
+                <text key="capacity" text="Paikkoja/latureita yhteensä" default="" />
                 <label text="Laturittyppien määrät ja tehot:"/>
+                <text key="socket:schuko" text="Schuko" default="" required="no"/>
+                <text key="socket:schuko:output" text="Schuko teho" default="" required="no"/>
                 <text key="socket:type2" text="Type 2" default="" required="no"/>
                 <text key="socket:type2:output" text="Type 2 teho" default="" required="no"/>
                 <text key="socket:type2_cable" text="Type 2 kaapelilla" default="" required="no"/>
@@ -203,6 +210,8 @@
                 <text key="socket:type2_combo:output" text="CCS teho" default="" required="no"/>
                 <text key="socket:chademo" text="Chademo" default="" required="no"/>
                 <text key="socket:chademo:output" text="Chademo teho" default="" required="no"/>
+                <space/>
+                <text key="charging_station:output" text="Aseman kokonaisteho" default="" required="no"/>
                 <!-- Tässä nyt toistaiseksi vain yleisimmät laturityypit -->
             </item>
             <item name="Latauslaite/tolppa" type="node">
